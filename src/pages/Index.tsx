@@ -179,7 +179,7 @@ export default function Index() {
                 Работаем с 2018 года, приняли более 10 000 гостей. Безопасность — наш приоритет.
               </p>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16 }}>
-                {[["6", "лет опыта"], ["50+", "животных"], ["100%", "безопасно"]].map(([n, l]) => (
+                {[["10", "лет опыта"], ["50+", "животных"], ["100%", "безопасно"]].map(([n, l]) => (
                   <div key={l} style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 16, padding: 16, textAlign: "center" }}>
                     <div style={{ fontFamily: "'Pacifico', cursive", fontSize: 28, color: "#FF6B00" }}>{n}</div>
                     <div style={{ color: "rgba(255,255,255,0.45)", fontSize: 11, marginTop: 4 }}>{l}</div>
