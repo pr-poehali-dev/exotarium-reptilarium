@@ -4,7 +4,7 @@ import Icon from "@/components/ui/icon";
 const HERO_IMG = "https://cdn.poehali.dev/projects/488a9909-aede-49bf-ae6d-d32ad8f7bfae/files/caf7e8f3-b80a-41c9-9323-05d5e333709e.jpg";
 
 const animals = [
-  { emoji: "🦎", name: "Игуаны", desc: "Гигантские зелёные красавцы. Дают себя гладить и любят тепло рук.", color: "bg-green-500" },
+  { emoji: "🦎", name: "Ящерицы", desc: "Гигантские зелёные красавцы. Дают себя гладить и любят тепло рук.", color: "bg-green-500" },
   { emoji: "🐍", name: "Удавы", desc: "Спокойные и ласковые. Можно подержать на шее!", color: "bg-teal-500" },
   { emoji: "🦜", name: "Попугаи", desc: "Говорят, поют и садятся на плечо. Яркие звёзды шоу.", color: "bg-orange-500" },
   { emoji: "🐢", name: "Черепахи", desc: "Медлительные мудрецы. Отлично подходят для детей.", color: "bg-purple-600" },
