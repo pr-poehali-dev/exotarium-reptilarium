@@ -265,32 +265,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* PRICES */}
-      <section id="prices" style={{ padding: "96px 20px", background: "rgba(0,200,83,0.03)" }}>
-        <div style={{ maxWidth: 700, margin: "0 auto" }}>
-          <Reveal>
-            <div style={{ textAlign: "center", marginBottom: 64 }}>
-              <div style={{ color: "#00C853", fontWeight: 700, fontSize: 12, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 16 }}>Стоимость посещения</div>
-              <h2 style={{ fontFamily: "'Pacifico', cursive", fontSize: "clamp(36px, 6vw, 72px)", color: "#FFD600" }}>Цены</h2>
-            </div>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <div style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 24, overflow: "hidden" }}>
-              {prices.map((p, i) => (
-                <div key={i} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "20px 28px", borderBottom: i < prices.length - 1 ? "1px solid rgba(255,255,255,0.06)" : "none" }}>
-                  <div>
-                    <div style={{ fontWeight: 700, color: "#fff", fontSize: 17 }}>{p.name}</div>
-                    <div style={{ color: "rgba(255,255,255,0.35)", fontSize: 12 }}>{p.note}</div>
-                  </div>
-                  <div style={{ fontFamily: "'Pacifico', cursive", color: "#FFD600", fontSize: 28 }}>{p.price}</div>
-                </div>
-              ))}
-            </div>
-          </Reveal>
-
-        </div>
-      </section>
-
       {/* REVIEWS */}
       <section id="reviews" style={{ padding: "96px 20px" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
