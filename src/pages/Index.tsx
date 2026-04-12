@@ -290,13 +290,7 @@ export default function Index() {
               ))}
             </div>
           </Reveal>
-          <Reveal delay={0.2}>
-            <div style={{ marginTop: 24, background: "rgba(255,107,0,0.12)", border: "1px solid rgba(255,107,0,0.3)", borderRadius: 20, padding: 24, textAlign: "center" }}>
-              <div style={{ fontSize: 28, marginBottom: 8 }}>🎉</div>
-              <div style={{ fontWeight: 700, color: "#fff", fontSize: 17, marginBottom: 6 }}>Каждую пятницу — день скидок!</div>
-              <div style={{ color: "rgba(255,255,255,0.55)", fontSize: 13 }}>Промокод <span style={{ color: "#FFD600", fontWeight: 700 }}>ЭКЗО20</span> — скидка 20%</div>
-            </div>
-          </Reveal>
+
         </div>
       </section>
 
