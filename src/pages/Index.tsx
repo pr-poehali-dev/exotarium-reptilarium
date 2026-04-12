@@ -5,7 +5,7 @@ const HERO_IMG = "https://cdn.poehali.dev/projects/488a9909-aede-49bf-ae6d-d32ad
 
 const animals = [
   { emoji: "🦎", name: "Игуаны", desc: "Гигантские зелёные красавцы. Дают себя гладить и любят тепло рук.", color: "bg-green-500" },
-  { emoji: "🐍", name: "Питоны", desc: "Спокойные и ласковые. Можно подержать на шее!", color: "bg-teal-500" },
+  { emoji: "🐍", name: "Удавы", desc: "Спокойные и ласковые. Можно подержать на шее!", color: "bg-teal-500" },
   { emoji: "🦜", name: "Попугаи", desc: "Говорят, поют и садятся на плечо. Яркие звёзды шоу.", color: "bg-orange-500" },
   { emoji: "🐢", name: "Черепахи", desc: "Медлительные мудрецы. Отлично подходят для детей.", color: "bg-purple-600" },
   { emoji: "🦋", name: "Бабочки", desc: "Тропические великаны сядут прямо на вашу ладонь.", color: "bg-pink-500" },
