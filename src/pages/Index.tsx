@@ -122,7 +122,7 @@ export default function Index() {
           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(13,27,15,0.5), rgba(13,27,15,0.2) 40%, #0D1B0F)" }} />
         </div>
 
-        {["🦎","🐍","🦜","🐢","🦋","🦔"].map((e, i) => (
+        {["🦎","🐍","🦜","🐢","🦋","🐍"].map((e, i) => (
           <span key={i} style={{
             position: "absolute", fontSize: "clamp(32px, 5vw, 64px)", opacity: 0.5, pointerEvents: "none", userSelect: "none",
             left: `${10 + i * 15}%`, top: `${15 + (i % 3) * 25}%`,
