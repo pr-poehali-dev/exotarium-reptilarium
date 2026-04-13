@@ -68,6 +68,7 @@ export default function Index() {
   const [activeAnimal, setActiveAnimal] = useState(0);
   const [privacyOpen, setPrivacyOpen] = useState(false);
   const [consentOpen, setConsentOpen] = useState(false);
+  const [consentChecked, setConsentChecked] = useState(false);
 
   const navLinks = [
     { href: "#about", label: "О нас" },
@@ -344,9 +345,29 @@ export default function Index() {
                     <option value="birthday">День рождения</option>
                     <option value="event">Выездное шоу</option>
                   </select>
-                  <button style={{ width: "100%", background: "#FF6B00", color: "#fff", fontWeight: 700, fontSize: 17, padding: "16px 0", borderRadius: 14, border: "none", cursor: "pointer", transition: "background 0.2s" }}
-                    onMouseEnter={e => (e.currentTarget.style.background = "#e55e00")}
-                    onMouseLeave={e => (e.currentTarget.style.background = "#FF6B00")}>
+                  <label style={{ display: "flex", alignItems: "flex-start", gap: 10, cursor: "pointer", userSelect: "none" }}>
+                    <input
+                      type="checkbox"
+                      checked={consentChecked}
+                      onChange={e => setConsentChecked(e.target.checked)}
+                      style={{ marginTop: 2, accentColor: "#FF6B00", width: 16, height: 16, flexShrink: 0, cursor: "pointer" }}
+                    />
+                    <span style={{ fontSize: 13, color: "rgba(255,255,255,0.55)", lineHeight: 1.5 }}>
+                      Я соглашаюсь с{" "}
+                      <button type="button" onClick={() => setConsentOpen(true)} style={{ background: "none", border: "none", color: "#FF6B00", cursor: "pointer", fontSize: 13, padding: 0, textDecoration: "underline" }}>
+                        обработкой персональных данных
+                      </button>
+                      {" "}и{" "}
+                      <button type="button" onClick={() => setPrivacyOpen(true)} style={{ background: "none", border: "none", color: "#FF6B00", cursor: "pointer", fontSize: 13, padding: 0, textDecoration: "underline" }}>
+                        политикой конфиденциальности
+                      </button>
+                    </span>
+                  </label>
+                  <button
+                    disabled={!consentChecked}
+                    style={{ width: "100%", background: consentChecked ? "#FF6B00" : "rgba(255,255,255,0.1)", color: consentChecked ? "#fff" : "rgba(255,255,255,0.3)", fontWeight: 700, fontSize: 17, padding: "16px 0", borderRadius: 14, border: "none", cursor: consentChecked ? "pointer" : "not-allowed", transition: "background 0.2s, color 0.2s" }}
+                    onMouseEnter={e => { if (consentChecked) e.currentTarget.style.background = "#e55e00"; }}
+                    onMouseLeave={e => { if (consentChecked) e.currentTarget.style.background = "#FF6B00"; }}>
                     Отправить заявку 🦎
                   </button>
                 </div>
