@@ -81,8 +81,9 @@ export default function Index() {
       {/* NAV */}
       <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 50, background: "rgba(13,27,15,0.92)", backdropFilter: "blur(12px)", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "12px 20px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-          <a href="#" style={{ fontFamily: "'Pacifico', cursive", fontSize: 24, color: "#FFD600", textDecoration: "none" }}>
-            🦎 Экзотариум
+          <a href="#" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: 10 }}>
+            <img src="https://cdn.poehali.dev/projects/488a9909-aede-49bf-ae6d-d32ad8f7bfae/bucket/6ee8f155-f57c-4e49-bbfc-7e4148c3730f.jpg" alt="Экзотариум Кулаковых" style={{ height: 48, width: 48, borderRadius: "50%", objectFit: "cover" }} />
+            <span style={{ fontFamily: "'Pacifico', cursive", fontSize: 20, color: "#FFD600" }}>Экзотариум</span>
           </a>
           <div className="hidden md:flex" style={{ gap: 24, alignItems: "center" }}>
             {navLinks.map(l => (
