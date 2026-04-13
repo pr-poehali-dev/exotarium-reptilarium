@@ -124,8 +124,8 @@ export default function Index() {
 
         {["🦎","🐍","🐊","🐢","🦎","🐍"].map((e, i) => (
           <span key={i} style={{
-            position: "absolute", fontSize: "clamp(32px, 5vw, 64px)", opacity: 0.5, pointerEvents: "none", userSelect: "none",
-            left: `${10 + i * 15}%`, top: `${15 + (i % 3) * 25}%`,
+            position: "absolute", fontSize: "clamp(24px, 3.5vw, 48px)", opacity: 0.6, pointerEvents: "none", userSelect: "none",
+            left: `${2 + i * 7}%`, top: `${65 + (i % 3) * 8}%`,
             animation: `float ${3 + i * 0.4}s ease-in-out infinite`, animationDelay: `${i * 0.5}s`
           }}>{e}</span>
         ))}
