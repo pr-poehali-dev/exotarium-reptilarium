@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import Icon from "@/components/ui/icon";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
 const HERO_IMG = "https://cdn.poehali.dev/projects/488a9909-aede-49bf-ae6d-d32ad8f7bfae/files/caf7e8f3-b80a-41c9-9323-05d5e333709e.jpg";
 
@@ -65,6 +66,8 @@ function Reveal({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 export default function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeAnimal, setActiveAnimal] = useState(0);
+  const [privacyOpen, setPrivacyOpen] = useState(false);
+  const [consentOpen, setConsentOpen] = useState(false);
 
   const navLinks = [
     { href: "#about", label: "О нас" },
@@ -360,6 +363,14 @@ export default function Index() {
           <div style={{ color: "rgba(255,255,255,0.35)", fontSize: 13, textAlign: "center" }}>
             © 2024 Экзотариум. Все права защищены.<br />
             <span style={{ color: "rgba(255,214,0,0.5)" }}>С любовью к животным и людям 🌿</span>
+            <div style={{ marginTop: 8, display: "flex", gap: 16, justifyContent: "center" }}>
+              <button onClick={() => setPrivacyOpen(true)} style={{ background: "none", border: "none", color: "rgba(255,255,255,0.45)", fontSize: 12, cursor: "pointer", textDecoration: "underline", padding: 0 }}>
+                Политика конфиденциальности
+              </button>
+              <button onClick={() => setConsentOpen(true)} style={{ background: "none", border: "none", color: "rgba(255,255,255,0.45)", fontSize: 12, cursor: "pointer", textDecoration: "underline", padding: 0 }}>
+                Согласие на обработку данных
+              </button>
+            </div>
           </div>
           <div style={{ display: "flex", gap: 12 }}>
             {["Instagram", "Youtube", "MessageCircle"].map((icon, i) => (
@@ -370,6 +381,53 @@ export default function Index() {
           </div>
         </div>
       </footer>
+
+      {/* ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ */}
+      <Dialog open={privacyOpen} onOpenChange={setPrivacyOpen}>
+        <DialogContent style={{ background: "#0D1B0F", border: "1px solid rgba(255,255,255,0.1)", color: "#fff", maxWidth: 620, maxHeight: "80vh", overflowY: "auto" }}>
+          <DialogHeader>
+            <DialogTitle style={{ color: "#FFD600", fontFamily: "'Pacifico', cursive", fontSize: 22 }}>Политика конфиденциальности</DialogTitle>
+          </DialogHeader>
+          <div style={{ fontSize: 14, lineHeight: 1.7, color: "rgba(255,255,255,0.75)", display: "flex", flexDirection: "column", gap: 16 }}>
+            <p><strong style={{ color: "#fff" }}>1. Общие положения</strong><br />
+            Настоящая Политика конфиденциальности определяет порядок обработки и защиты персональных данных пользователей сайта «Экзотариум» (далее — Оператор).</p>
+            <p><strong style={{ color: "#fff" }}>2. Какие данные мы собираем</strong><br />
+            Мы собираем: имя, номер телефона и иные данные, которые вы добровольно указываете при заполнении форм на сайте.</p>
+            <p><strong style={{ color: "#fff" }}>3. Цели обработки данных</strong><br />
+            Персональные данные обрабатываются в целях: обратной связи с пользователем, оформления заявок и записи на посещение, а также улучшения качества обслуживания.</p>
+            <p><strong style={{ color: "#fff" }}>4. Передача данных третьим лицам</strong><br />
+            Оператор не передаёт персональные данные третьим лицам без согласия пользователя, за исключением случаев, предусмотренных законодательством РФ.</p>
+            <p><strong style={{ color: "#fff" }}>5. Хранение и защита данных</strong><br />
+            Данные хранятся на защищённых серверах. Оператор принимает технические и организационные меры для защиты данных от несанкционированного доступа.</p>
+            <p><strong style={{ color: "#fff" }}>6. Права пользователя</strong><br />
+            Вы вправе в любой момент отозвать согласие на обработку данных, запросить их изменение или удаление, направив обращение на наш контактный адрес.</p>
+            <p><strong style={{ color: "#fff" }}>7. Контакты</strong><br />
+            По вопросам, связанным с обработкой персональных данных, обращайтесь через форму обратной связи на сайте.</p>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      {/* СОГЛАСИЕ НА ОБРАБОТКУ ПЕРСОНАЛЬНЫХ ДАННЫХ */}
+      <Dialog open={consentOpen} onOpenChange={setConsentOpen}>
+        <DialogContent style={{ background: "#0D1B0F", border: "1px solid rgba(255,255,255,0.1)", color: "#fff", maxWidth: 620, maxHeight: "80vh", overflowY: "auto" }}>
+          <DialogHeader>
+            <DialogTitle style={{ color: "#FFD600", fontFamily: "'Pacifico', cursive", fontSize: 22 }}>Согласие на обработку персональных данных</DialogTitle>
+          </DialogHeader>
+          <div style={{ fontSize: 14, lineHeight: 1.7, color: "rgba(255,255,255,0.75)", display: "flex", flexDirection: "column", gap: 16 }}>
+            <p>Заполняя форму на сайте «Экзотариум», я, субъект персональных данных, в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных», даю своё согласие на обработку следующих персональных данных:</p>
+            <ul style={{ paddingLeft: 20, display: "flex", flexDirection: "column", gap: 6 }}>
+              <li>фамилия, имя, отчество;</li>
+              <li>номер контактного телефона;</li>
+              <li>иные данные, указанные мной добровольно в форме.</li>
+            </ul>
+            <p><strong style={{ color: "#fff" }}>Цели обработки:</strong> обратная связь, оформление заявок и записи на посещение контактного зоопарка «Экзотариум».</p>
+            <p><strong style={{ color: "#fff" }}>Способы обработки:</strong> сбор, запись, систематизация, хранение, уточнение, использование, передача (при необходимости), обезличивание, блокирование, удаление.</p>
+            <p><strong style={{ color: "#fff" }}>Срок действия согласия:</strong> бессрочно, до момента его отзыва.</p>
+            <p>Я подтверждаю, что ознакомлен(а) с Политикой конфиденциальности и осознаю, что вправе в любое время отозвать своё согласие путём направления письменного обращения Оператору.</p>
+            <p style={{ color: "rgba(255,255,255,0.45)", fontSize: 12 }}>Настоящее согласие считается предоставленным с момента отправки заполненной формы на сайте.</p>
+          </div>
+        </DialogContent>
+      </Dialog>
 
       <style>{`
         @keyframes float {
