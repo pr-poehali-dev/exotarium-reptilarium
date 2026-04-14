@@ -5,7 +5,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 const HERO_IMG = "https://cdn.poehali.dev/projects/488a9909-aede-49bf-ae6d-d32ad8f7bfae/files/caf7e8f3-b80a-41c9-9323-05d5e333709e.jpg";
 
 const animals = [
-  { emoji: "🦎", name: "Ящерицы", desc: "Гигантские зелёные красавцы. Дают себя гладить и любят тепло рук.", color: "bg-green-500" },
+  { emoji: "🦎", name: "Ящерицы", desc: "Гигантские зелёные красавцы. Дают себя гладить и любят тепло рук.", color: "bg-green-500", photo: "https://cdn.poehali.dev/projects/488a9909-aede-49bf-ae6d-d32ad8f7bfae/bucket/f226e0fc-b58f-485b-b565-7ab63f480255.jpg" },
   { emoji: "🐍", name: "Удавы", desc: "Спокойные и ласковые. Можно подержать на шее!", color: "bg-teal-500" },
   { emoji: "🐢", name: "Черепахи", desc: "Медлительные мудрецы. Отлично подходят для детей.", color: "bg-purple-600" },
   { emoji: "🦎", name: "Гекконы", desc: "Маленькие и юркие. Умеют ходить по стенам и светятся яркими красками.", color: "bg-lime-500" },
@@ -240,6 +240,9 @@ export default function Index() {
                   onMouseLeave={e => { if (activeAnimal !== i) (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(255,255,255,0.08)"; }}
                 >
                   <div style={{ fontSize: 56, marginBottom: 16, animation: `float ${3 + i * 0.3}s ease-in-out infinite`, animationDelay: `${i * 0.3}s` }}>{a.emoji}</div>
+                  {(a as typeof a & { photo?: string }).photo && (
+                    <img src={(a as typeof a & { photo?: string }).photo} alt={a.name} style={{ width: "100%", borderRadius: 16, marginBottom: 16, objectFit: "cover", maxHeight: 220 }} />
+                  )}
                   <h3 style={{ fontFamily: "Georgia, serif", fontSize: 24, color: "#fff", marginBottom: 8 }}>{a.name}</h3>
                   <p style={{ color: "rgba(255,255,255,0.55)", fontSize: 13, lineHeight: 1.6 }}>{a.desc}</p>
                   <div style={{ marginTop: 16, display: "inline-block", background: "#00C853", color: "#fff", fontSize: 11, fontWeight: 700, padding: "4px 12px", borderRadius: 999 }}>
