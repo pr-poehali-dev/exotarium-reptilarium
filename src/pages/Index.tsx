@@ -328,7 +328,7 @@ export default function Index() {
                   { icon: "MapPin", label: "Адрес", value: "Приморский край, г. Артём, ул. Лазо, 11", color: "#FF6B00" },
                   { icon: "Phone", label: "Телефон", value: "+7 (914) 342-82-74", color: "#00C853" },
                   { icon: "Mail", label: "Email", value: "hello@exotarium.ru", color: "#00BFA5" },
-                  { icon: "Clock", label: "Режим работы", value: "Ежедневно 10:00–20:00", color: "#FFD600" },
+                  { icon: "Clock", label: "Режим работы", value: "Ежедневно 10:00–19:00", color: "#FFD600" },
                 ].map((c, i) => (
                   <div key={i} style={{ display: "flex", alignItems: "center", gap: 16 }}>
                     <div style={{ background: "rgba(255,255,255,0.06)", borderRadius: 14, padding: 12 }}>
