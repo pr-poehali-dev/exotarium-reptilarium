@@ -126,11 +126,21 @@ export default function Index() {
           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(13,27,15,0.5), rgba(13,27,15,0.2) 40%, #0D1B0F)" }} />
         </div>
 
-        {["🦎","🐍","🐢","🦎","🐍","🦎"].map((e, i) => (
+        {[
+          { e: "🦎", left: "8%",  top: "15%" },
+          { e: "🐍", left: "30%", top: "25%" },
+          { e: "🐢", left: "55%", top: "12%" },
+          { e: "🦎", left: "78%", top: "30%" },
+          { e: "🐍", left: "18%", top: "70%" },
+          { e: "🦎", left: "45%", top: "75%" },
+          { e: "🐢", left: "70%", top: "65%" },
+          { e: "🐍", left: "88%", top: "80%" },
+          { e: "🦎", left: "92%", top: "20%" },
+        ].map(({ e, left, top }, i) => (
           <span key={i} style={{
-            position: "absolute", fontSize: "clamp(24px, 3.5vw, 48px)", opacity: 0.6, pointerEvents: "none", userSelect: "none",
-            left: `${2 + i * 7}%`, top: `${65 + (i % 3) * 8}%`,
-            animation: `float ${3 + i * 0.4}s ease-in-out infinite`, animationDelay: `${i * 0.5}s`
+            position: "absolute", fontSize: "clamp(20px, 2.5vw, 38px)", opacity: 0.45, pointerEvents: "none", userSelect: "none",
+            left, top,
+            animation: `float ${3.5 + i * 0.3}s ease-in-out infinite`, animationDelay: `${i * 0.4}s`
           }}>{e}</span>
         ))}
 
