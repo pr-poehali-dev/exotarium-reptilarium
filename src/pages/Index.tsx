@@ -6,7 +6,7 @@ const HERO_IMG = "https://cdn.poehali.dev/projects/488a9909-aede-49bf-ae6d-d32ad
 
 const animals = [
   { emoji: "🦎", name: "Ящерицы", desc: "Гигантские зелёные красавцы. Дают себя гладить и любят тепло рук.", color: "bg-green-500", photo: "https://cdn.poehali.dev/projects/488a9909-aede-49bf-ae6d-d32ad8f7bfae/bucket/f226e0fc-b58f-485b-b565-7ab63f480255.jpg" },
-  { emoji: "🐍", name: "Удавы", desc: "Спокойные и ласковые. Можно подержать на шее!", color: "bg-teal-500" },
+  { emoji: "🐍", name: "Змеи", desc: "Спокойные и ласковые. Можно подержать на шее!", color: "bg-teal-500" },
   { emoji: "🐢", name: "Черепахи", desc: "Медлительные мудрецы. Отлично подходят для детей.", color: "bg-purple-600" },
   { emoji: "🦎", name: "Гекконы", desc: "Маленькие и юркие. Умеют ходить по стенам и светятся яркими красками.", color: "bg-lime-500" },
   { emoji: "🐍", name: "Маисовые полозы", desc: "Яркие и дружелюбные змейки. Идеальны для первого знакомства с рептилиями.", color: "bg-red-500" },
