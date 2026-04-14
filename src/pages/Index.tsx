@@ -138,7 +138,7 @@ export default function Index() {
           { e: "🦎", left: "92%", top: "20%" },
         ].map(({ e, left, top }, i) => (
           <span key={i} style={{
-            position: "absolute", fontSize: "clamp(20px, 2.5vw, 38px)", opacity: 0.45, pointerEvents: "none", userSelect: "none",
+            position: "absolute", fontSize: "clamp(40px, 5vw, 76px)", opacity: 0.45, pointerEvents: "none", userSelect: "none",
             left, top,
             animation: `float ${3.5 + i * 0.3}s ease-in-out infinite`, animationDelay: `${i * 0.4}s`
           }}>{e}</span>
