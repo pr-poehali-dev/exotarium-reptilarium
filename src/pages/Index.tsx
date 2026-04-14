@@ -87,7 +87,7 @@ export default function Index() {
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "12px 20px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <a href="#" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: 10 }}>
             <img src="https://cdn.poehali.dev/projects/488a9909-aede-49bf-ae6d-d32ad8f7bfae/bucket/6ee8f155-f57c-4e49-bbfc-7e4148c3730f.jpg" alt="Экзотариум Кулаковых" style={{ height: 48, width: 48, borderRadius: "50%", objectFit: "cover" }} />
-            <span style={{ fontFamily: "'Pacifico', cursive", fontSize: 20, color: "#FFD600" }}>Экзотариум Кулаковых</span>
+            <span style={{ fontFamily: "Georgia, serif", fontSize: 20, color: "#FFD600" }}>Экзотариум Кулаковых</span>
           </a>
           <div className="hidden md:flex" style={{ gap: 24, alignItems: "center" }}>
             {navLinks.map(l => (
@@ -138,7 +138,7 @@ export default function Index() {
           <div style={{ display: "inline-block", background: "rgba(255,214,0,0.15)", border: "1px solid rgba(255,214,0,0.4)", color: "#FFD600", fontWeight: 700, fontSize: 13, padding: "6px 16px", borderRadius: 999, marginBottom: 24 }}>
             🔥 Можно трогать руками!
           </div>
-          <h1 style={{ fontFamily: "'Pacifico', cursive", fontSize: "clamp(40px, 8vw, 90px)", lineHeight: 1.15, marginBottom: 24 }}>
+          <h1 style={{ fontFamily: "Georgia, serif", fontSize: "clamp(40px, 8vw, 90px)", lineHeight: 1.15, marginBottom: 24 }}>
             <span style={{ color: "#FFD600" }}>Живая</span>{" "}
             <span style={{ color: "#fff" }}>экзотика</span>
             <br />
@@ -158,7 +158,7 @@ export default function Index() {
           <div style={{ marginTop: 60, display: "flex", justifyContent: "center", gap: 48, flexWrap: "wrap" }}>
             {[["50+", "видов животных"], ["10 000+", "счастливых гостей"], ["5★", "рейтинг"]].map(([n, l]) => (
               <div key={l} style={{ textAlign: "center" }}>
-                <div style={{ fontFamily: "'Pacifico', cursive", fontSize: 40, color: "#FFD600" }}>{n}</div>
+                <div style={{ fontFamily: "Georgia, serif", fontSize: 40, color: "#FFD600" }}>{n}</div>
                 <div style={{ color: "rgba(255,255,255,0.5)", fontSize: 13, marginTop: 4 }}>{l}</div>
               </div>
             ))}
@@ -172,7 +172,7 @@ export default function Index() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 64, alignItems: "center" }}>
             <div>
               <div style={{ color: "#00C853", fontWeight: 700, fontSize: 12, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 16 }}>О нас</div>
-              <h2 style={{ fontFamily: "'Pacifico', cursive", fontSize: "clamp(32px, 5vw, 56px)", lineHeight: 1.2, marginBottom: 24 }}>
+              <h2 style={{ fontFamily: "Georgia, serif", fontSize: "clamp(32px, 5vw, 56px)", lineHeight: 1.2, marginBottom: 24 }}>
                 Место, где<br /><span style={{ color: "#FFD600" }}>рождаются</span><br />эмоции
               </h2>
               <p style={{ color: "rgba(255,255,255,0.65)", fontSize: 17, lineHeight: 1.7, marginBottom: 16 }}>
@@ -184,7 +184,7 @@ export default function Index() {
               <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16 }}>
                 {[["10", "лет опыта"], ["50+", "животных"], ["100%", "безопасно"]].map(([n, l]) => (
                   <div key={l} style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 16, padding: 16, textAlign: "center" }}>
-                    <div style={{ fontFamily: "'Pacifico', cursive", fontSize: 28, color: "#FF6B00" }}>{n}</div>
+                    <div style={{ fontFamily: "Georgia, serif", fontSize: 28, color: "#FF6B00" }}>{n}</div>
                     <div style={{ color: "rgba(255,255,255,0.45)", fontSize: 11, marginTop: 4 }}>{l}</div>
                   </div>
                 ))}
@@ -210,7 +210,7 @@ export default function Index() {
           <Reveal>
             <div style={{ textAlign: "center", marginBottom: 64 }}>
               <div style={{ color: "#FF6B00", fontWeight: 700, fontSize: 12, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 16 }}>Наши обитатели</div>
-              <h2 style={{ fontFamily: "'Pacifico', cursive", fontSize: "clamp(36px, 6vw, 72px)" }}>
+              <h2 style={{ fontFamily: "Georgia, serif", fontSize: "clamp(36px, 6vw, 72px)" }}>
                 Познакомься<br />с <span style={{ color: "#00C853" }}>жителями</span>
               </h2>
             </div>
@@ -230,7 +230,7 @@ export default function Index() {
                   onMouseLeave={e => { if (activeAnimal !== i) (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(255,255,255,0.08)"; }}
                 >
                   <div style={{ fontSize: 56, marginBottom: 16, animation: `float ${3 + i * 0.3}s ease-in-out infinite`, animationDelay: `${i * 0.3}s` }}>{a.emoji}</div>
-                  <h3 style={{ fontFamily: "'Pacifico', cursive", fontSize: 24, color: "#fff", marginBottom: 8 }}>{a.name}</h3>
+                  <h3 style={{ fontFamily: "Georgia, serif", fontSize: 24, color: "#fff", marginBottom: 8 }}>{a.name}</h3>
                   <p style={{ color: "rgba(255,255,255,0.55)", fontSize: 13, lineHeight: 1.6 }}>{a.desc}</p>
                   <div style={{ marginTop: 16, display: "inline-block", background: "#00C853", color: "#fff", fontSize: 11, fontWeight: 700, padding: "4px 12px", borderRadius: 999 }}>
                     Можно трогать!
@@ -248,7 +248,7 @@ export default function Index() {
           <Reveal>
             <div style={{ textAlign: "center", marginBottom: 64 }}>
               <div style={{ color: "#00BFA5", fontWeight: 700, fontSize: 12, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 16 }}>Что мы предлагаем</div>
-              <h2 style={{ fontFamily: "'Pacifico', cursive", fontSize: "clamp(36px, 6vw, 72px)" }}>
+              <h2 style={{ fontFamily: "Georgia, serif", fontSize: "clamp(36px, 6vw, 72px)" }}>
                 Наши <span style={{ color: "#FFD600" }}>услуги</span>
               </h2>
             </div>
@@ -264,7 +264,7 @@ export default function Index() {
                   </div>
                   <h3 style={{ fontWeight: 700, fontSize: 20, color: "#fff", marginBottom: 8 }}>{s.title}</h3>
                   <p style={{ color: "rgba(255,255,255,0.55)", fontSize: 13, lineHeight: 1.6, marginBottom: 16 }}>{s.desc}</p>
-                  <div style={{ fontFamily: "'Pacifico', cursive", color: "#FFD600", fontSize: 22 }}>{s.price}</div>
+                  <div style={{ fontFamily: "Georgia, serif", color: "#FFD600", fontSize: 22 }}>{s.price}</div>
                 </div>
               </Reveal>
             ))}
@@ -278,7 +278,7 @@ export default function Index() {
           <Reveal>
             <div style={{ textAlign: "center", marginBottom: 64 }}>
               <div style={{ color: "#FF1F7D", fontWeight: 700, fontSize: 12, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 16 }}>Что говорят гости</div>
-              <h2 style={{ fontFamily: "'Pacifico', cursive", fontSize: "clamp(36px, 6vw, 72px)", color: "#FFD600" }}>Отзывы</h2>
+              <h2 style={{ fontFamily: "Georgia, serif", fontSize: "clamp(36px, 6vw, 72px)", color: "#FFD600" }}>Отзывы</h2>
             </div>
           </Reveal>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 24 }}>
@@ -308,7 +308,7 @@ export default function Index() {
           <Reveal>
             <div style={{ textAlign: "center", marginBottom: 64 }}>
               <div style={{ color: "#00BFA5", fontWeight: 700, fontSize: 12, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 16 }}>Мы ждём вас</div>
-              <h2 style={{ fontFamily: "'Pacifico', cursive", fontSize: "clamp(36px, 6vw, 72px)", color: "#FFD600" }}>Контакты</h2>
+              <h2 style={{ fontFamily: "Georgia, serif", fontSize: "clamp(36px, 6vw, 72px)", color: "#FFD600" }}>Контакты</h2>
             </div>
           </Reveal>
           <Reveal delay={0.1}>
@@ -332,7 +332,7 @@ export default function Index() {
                 ))}
               </div>
               <div style={{ background: "rgba(255,107,0,0.1)", border: "1px solid rgba(255,107,0,0.25)", borderRadius: 24, padding: 32 }}>
-                <h3 style={{ fontFamily: "'Pacifico', cursive", fontSize: 24, color: "#fff", marginBottom: 24 }}>Записаться на визит</h3>
+                <h3 style={{ fontFamily: "Georgia, serif", fontSize: 24, color: "#fff", marginBottom: 24 }}>Записаться на визит</h3>
                 <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
                   <input type="text" placeholder="Ваше имя"
                     style={{ width: "100%", background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: 14, padding: "12px 16px", color: "#fff", outline: "none", fontSize: 15, boxSizing: "border-box" }} />
@@ -380,7 +380,7 @@ export default function Index() {
       {/* FOOTER */}
       <footer style={{ borderTop: "1px solid rgba(255,255,255,0.08)", padding: "40px 20px" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 16 }}>
-          <div style={{ fontFamily: "'Pacifico', cursive", fontSize: 22, color: "#FFD600" }}>🦎 Экзотариум</div>
+          <div style={{ fontFamily: "Georgia, serif", fontSize: 22, color: "#FFD600" }}>🦎 Экзотариум</div>
           <div style={{ color: "rgba(255,255,255,0.35)", fontSize: 13, textAlign: "center" }}>
             © 2024 Экзотариум. Все права защищены.<br />
             <span style={{ color: "rgba(255,214,0,0.5)" }}>С любовью к животным и людям 🌿</span>
@@ -407,7 +407,7 @@ export default function Index() {
       <Dialog open={privacyOpen} onOpenChange={setPrivacyOpen}>
         <DialogContent style={{ background: "#0D1B0F", border: "1px solid rgba(255,255,255,0.1)", color: "#fff", maxWidth: 620, maxHeight: "80vh", overflowY: "auto" }}>
           <DialogHeader>
-            <DialogTitle style={{ color: "#FFD600", fontFamily: "'Pacifico', cursive", fontSize: 22 }}>Политика конфиденциальности</DialogTitle>
+            <DialogTitle style={{ color: "#FFD600", fontFamily: "Georgia, serif", fontSize: 22 }}>Политика конфиденциальности</DialogTitle>
           </DialogHeader>
           <div style={{ fontSize: 14, lineHeight: 1.7, color: "rgba(255,255,255,0.75)", display: "flex", flexDirection: "column", gap: 16 }}>
             <p><strong style={{ color: "#fff" }}>1. Общие положения</strong><br />
@@ -432,7 +432,7 @@ export default function Index() {
       <Dialog open={consentOpen} onOpenChange={setConsentOpen}>
         <DialogContent style={{ background: "#0D1B0F", border: "1px solid rgba(255,255,255,0.1)", color: "#fff", maxWidth: 620, maxHeight: "80vh", overflowY: "auto" }}>
           <DialogHeader>
-            <DialogTitle style={{ color: "#FFD600", fontFamily: "'Pacifico', cursive", fontSize: 22 }}>Согласие на обработку персональных данных</DialogTitle>
+            <DialogTitle style={{ color: "#FFD600", fontFamily: "Georgia, serif", fontSize: 22 }}>Согласие на обработку персональных данных</DialogTitle>
           </DialogHeader>
           <div style={{ fontSize: 14, lineHeight: 1.7, color: "rgba(255,255,255,0.75)", display: "flex", flexDirection: "column", gap: 16 }}>
             <p>Заполняя форму на сайте «Экзотариум», я, субъект персональных данных, в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных», даю своё согласие на обработку следующих персональных данных:</p>
